@@ -1,0 +1,47 @@
+/**
+ * animation
+ *
+ *
+ */
+
+.animation-1 {
+	.animated-list {
+		list-style-type: none;
+
+		li {		
+			opacity: 0;
+			color: white;
+			transition: all .3s cubic-bezier(0.65, 0.05, 0.24, 1.39);
+
+			&.active {
+				margin-left: -40px;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+body {
+	transition: background-color .3s cubic-bezier(0.65, 0.05, 0.24, 1.39), color .3s cubic-bezier(0.65, 0.05, 0.24, 1.39);
+
+	&.color-1-active {
+		background-color: #5A1846;
+		color: white;
+	}
+	&.color-2-active {
+		background-color: #910D3F;
+		color: white;
+	}
+	&.color-3-active {
+		background-color: #C70039;
+		color: white;
+	}
+	&.color-4-active {
+		background-color: #FF5733;
+		color: white;
+	}
+	&.color-5-active {
+		background-color: #FFC301;
+		color: white;
+	}
+}

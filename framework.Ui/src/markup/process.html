@@ -1,0 +1,155 @@
+<!--#include virtual="include/head.html" -->
+<!--#include virtual="include/header.html" -->
+
+<!-- Content -->
+<div class="container">
+	<a type="btn" href="/" class="btn btn-danger btn-lg">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back
+	</a>
+	
+	<h1>Production Process</h1>
+
+	<p>
+		<strong>Abbreviations &amp; terms</strong>
+	</p>
+	
+	<ul>
+		<li><span class="label label-default">FE</span> - Front end</li>
+		<li><span class="label label-default">BE</span> - Back end</li>
+		<li><span class="label label-default">FW</span> - Framework</li>
+		<li><span class="label label-default">TC</span> - Team City</li>
+		<li><span class="label label-default">CS</span> - Client services</li>
+		<li><span class="label label-default">PM</span> - Project manager</li>
+		<li><span class="label label-default">Magic Name</span> - Unique job code required for any change request. This will be what defines the branch name. <span class="label label-danger">Naming convention to be agreed</span></li>
+		<li><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> - Represents continuous integration</li>
+	</ul>
+
+	<br>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="cell" style="padding: 20px; border: 1px solid #84b7e2; border-radius: 6px; background-color: #c6e2f9;">
+				<h2>New site</h2>
+				
+				<h3>1<small>A</small>. <span class="label label-default">FE</span> Creates Git</h3>
+
+				<ul>
+					<li>
+						Single repo with two branches:
+
+						<ul>
+							<li>master</li>
+							<li>staging</li>
+						</ul>
+					</li>
+					<li>Clone <span class="label label-default">FW</span></li>
+					<li>Reinitialise git as new porject</li>
+					<li>Checkout staging</li>
+					<li>Write beautiful code</li>
+				</ul>
+
+				<h3>1<small>B</small>. <span class="label label-default">BE</span> add <span class="label label-default">TC</span> profile</h3>
+
+				<ul>
+					<li>Octopus deploy</li>
+				</ul>
+				
+				<h3>2. <span class="label label-default">BE</span> adds CMS</h3>
+
+				<ul>
+					<li>Add latest CMS structure</li>
+					<li>Integrate HTML templates</li>
+				</ul>
+				
+				<h3><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <span class="label label-default">TC</span> continuously deploys to DEV SERVER</h3>
+				
+				<h3>3. Internal Testing</h3>
+
+				<ul>
+					<li>Design / <span class="label label-default">PM</span> / <span class="label label-default">CS</span> sign off</li>
+				</ul>
+				
+				<h3>4. UAT Deploy</h3>
+
+				<ul>
+					<li>Conf deploy</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="cell" style="padding: 20px; border: 1px solid #84b7e2; border-radius: 6px; background-color: #c6e2f9;">
+				<h2>Change Request</h2>
+
+				<h3>1. <span class="label label-default">CS</span> / <span class="label label-default">PM</span> Brief Job</h3>
+
+				<ul>
+					<li>Supply <span class="label label-default">Magic Name</span></li>
+					<li>Supply brief</li>
+				</ul>
+
+				<h3>2. Create <span class="label label-default">Magic Name</span> Branch</h3>
+
+				<ul>
+					<li>Create branch from master</li>
+					<li>Carry out work on this branch only (very important)</li>
+				</ul>
+				
+				<h3><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <span class="label label-default">TC</span> continuously deploys to DEV SERVER</h3>
+
+				<h3>2. HUB / <span class="label label-default">CS</span> / <span class="label label-default">PM</span> Sign Off</h3>
+
+				<h3>4. <span class="label label-default">BE</span> Release From <span class="label label-default">PM</span> / <span class="label label-default">CS</span></h3>
+
+				<ul>
+					<li>Supply release notes with what <span class="label label-default">Magic Names</span> are to go live (staging)</li>
+				</ul>
+
+				<h3>5. <span class="label label-default">BE</span> Test Staging</h3>
+
+				<ul>
+					<li>Continue after sign off</li>
+				</ul>
+
+				<h3>6. <span class="label label-default">BE</span> Merge Master</h3>
+
+				<ul>
+					<li>Master is now latest live</li>
+				</ul>
+
+				<h3>7. <span class="label label-default">BE</span> Remove <span class="label label-default">Magic Names</span> branch</h3>
+
+				<ul>
+					<li>When the change request is complete <span class="label label-default">BE</span> to remove <span class="label label-default">magic number branch</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- <h2>Stages of work</h2>
+
+	<div class="row">
+		<div class="col-md-2">
+			<span class="label label-default" style="display: block; font-size: 26px;" data-toggle="tooltip" data-placement="bottom" title="Front end">Dev</span>
+		</div>
+		<div class="col-md-2">
+			<span class="label label-default" style="display: block; font-size: 26px;" data-toggle="tooltip" data-placement="bottom" title="Back end">Staging</span>
+		</div>
+		<div class="col-md-2">
+			<span class="label label-default" style="display: block; font-size: 26px;" data-toggle="tooltip" data-placement="bottom" title="Client services / Project manager">Testing</span>
+		</div>
+		<div class="col-md-2">
+			<span class="label label-default" style="display: block; font-size: 26px;" data-toggle="tooltip" data-placement="bottom" title="Back end">Deploy</span>
+		</div>
+		<div class="col-md-2">
+			<span class="label label-default" style="display: block; font-size: 26px;" data-toggle="tooltip" data-placement="bottom" title="Back end">RMV</span>
+		</div>
+	</div> -->
+
+	<br>
+	<br>
+	<br>
+</div>
+
+<!--#include virtual="include/footer.html" -->
+<!--#include virtual="include/foot.html" -->

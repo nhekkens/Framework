@@ -1,0 +1,49 @@
+{
+    "Questions": [
+        {
+            "id": 0,
+            "question": "Do you like JavaScript?",
+            "answers": [
+                {
+                    "title": "Yes"
+                },
+                {
+                    "title": "No"
+                },
+                {
+                    "title": "Love it"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "question": "Do you like HTML?",
+            "answers": [
+                {
+                    "title": "Yes"
+                },
+                {
+                    "title": "No"
+                },
+                {
+                    "title": "Its really hard to make a div"
+                },
+                {
+                    "title": "I am a HTML rockstar"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Do you like CSS?",
+            "answers": [
+                {
+                    "title": "Why yes"
+                },
+                {
+                    "title": "No, I do not get it!"
+                }
+            ]
+        }
+    ]
+}

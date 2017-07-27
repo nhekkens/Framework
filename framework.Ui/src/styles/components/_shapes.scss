@@ -1,0 +1,54 @@
+/**
+ * shapes
+ *
+ *
+ */
+
+$slopeColor: $brand-primary;
+$slopeAngle: 3deg;
+$slopeHeight: 50px;
+
+.slope-parent {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.slope-content {
+	background-color: $slopeColor;
+	color: #fff;
+	display: block;
+	position: relative;
+	padding: 20px;
+}
+
+.slope {
+	background-color: $slopeColor;
+	display: block;
+	height: $slopeHeight;
+	position: relative;
+	width: 100%;
+
+	&.slope-right {
+		&:after {
+	    	transform: translate(-2%, 50%) rotate(-$slopeAngle);
+		}
+	}
+
+	&:after {
+		background-color: #fff;
+	    bottom: 0;
+	    content: '';
+	    height: $slopeHeight;
+	    left: 0;
+	    position: absolute;
+	    transform: translate(-2%, 50%) rotate($slopeAngle);
+	    width: 110%;
+	    z-index: 1;
+	}
+}

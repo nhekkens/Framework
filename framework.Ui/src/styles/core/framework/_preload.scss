@@ -1,0 +1,15 @@
+// Styles for when page is loading
+
+body {
+	opacity: 1;
+	
+	transition: {
+		property: opacity;
+		duration: $animDuration;
+		timing-function: $animEasing;
+	}
+
+	&.preload {
+		opacity: 0;
+	}
+}

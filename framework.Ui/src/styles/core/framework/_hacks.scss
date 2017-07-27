@@ -1,0 +1,38 @@
+// Styles for override hacks
+
+// fixing old iPad not showing dropdown arrows
+.bootstrap-select {
+	width: 100% !important;
+
+	.caret {
+	    border-top: 4px solid;
+	}
+}
+
+// video black line issue
+.plyr--youtube,
+.plyr--vimeo,
+.ios .plyr-ready {
+    &:before {
+        background-color: #fff;
+        content: '';
+        height: 2px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+    }
+    &:after {
+        background-color: #fff;
+        bottom: 0;
+        content: '';
+        height: 2px;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+video {
+    width: 100%;
+    height: auto;
+}

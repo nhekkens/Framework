@@ -1,0 +1,35 @@
+<!--#include virtual="include/head.html" -->
+<!--#include virtual="include/header.html" -->
+<!-- Content -->
+<div class="container">
+	<div class="row padding-top-40">
+		<div class="keyframe col-xs-12">
+			<h1>Keyframe animations</h1>
+
+			<div class="square">&nbsp;</div>
+
+			<div class="bgImage is-active">
+				&nbsp;
+				<div class="message">Click here to change your location</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	setTimeout(function(){
+        $('.bgImage .message').fadeOut();
+    }, 5000);
+
+
+	// ADD TO COOKIE.JS IF NEEDED FOR LEWIS LOCATION HINT JOB
+	// var firstVisitLocationCookie = cookieSystem.get("firstVisitLocation");
+
+	// if ( firstVisitLocationCookie === null ) {
+	// 	$('.bgImage .message').fadeIn();
+	// 	cookieSystem.set("firstVisitLocation", "yes", 365);
+	// }
+</script>
+
+<!--#include virtual="include/footer.html" -->
+<!--#include virtual="include/foot.html" -->

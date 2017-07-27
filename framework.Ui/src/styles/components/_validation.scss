@@ -1,0 +1,31 @@
+/**
+ * Validation
+ *
+ *
+ */
+
+ label.required {
+	.required__indicator {
+		color: $brand-danger;
+	}
+}
+
+.error,
+.dropdown-toggle.error {
+	border-color: $brand-danger;
+}
+
+/* validation checkbox */
+.error + label.required {
+	&:before {
+		border-color: $brand-danger;
+	}
+}
+/* validation radio button */
+.error + label.required .radioCustom {
+	border-color: $brand-danger;
+}
+
+span.error {
+	font-size: 14px;
+}

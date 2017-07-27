@@ -1,0 +1,304 @@
+<!--#include virtual="include/head.html" -->
+<!--#include virtual="include/header.html" -->
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Documentation</h1>
+        </div>
+        <!--Nav Bar -->
+        <nav class="col-sm-3 bs-docs-sidebar hidden-xs">
+            <ul id="sidebar" class="nav nav-stacked fixed">
+                <li>
+                    <a href="#GroupA">Breadcrumbs</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupASub1">Intro</a></li>
+                        <li><a href="#GroupASub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupB">Dropdowns</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupBSub1">Intro</a></li>
+                        <li><a href="#GroupBSub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupC">Grid</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupCSub1">Intro</a></li>
+                        <li><a href="#GroupCSub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupD">Jumbotron</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupDSub1">Intro</a></li>
+                        <li><a href="#GroupDSub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupE">Modal</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupESub1">Intro</a></li>
+                        <li><a href="#GroupESub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupE2">Notifications</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupE2Sub1">Intro</a></li>
+                        <li><a href="#GroupE2Sub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupF">Tooltips</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupFSub1">Intro</a></li>
+                        <li><a href="#GroupFSub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupG">Video Embed</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupGSub1">Intro</a></li>
+                        <li><a href="#GroupGSub2">Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupH">Process</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupHSub1">Intro</a></li>
+                        <li><a href="#GroupHSub2">Demo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Main Content -->
+        <div class="col-sm-9 col-xs-12">
+            <section id="GroupA" class="group">
+                <h3>Breadcrumbs</h3>
+                <hr>
+                <div id="GroupASub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Separators are automatically added in CSS through :before and content.</p>
+                </div>
+                <hr>
+                <div id="GroupASub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <!--#include virtual="demo/breadcrumbs.html" -->
+                </div>
+            </section>
+            <section id="GroupB" class="group padding-top-40">
+                <h3>Dropdowns</h3>
+                <hr>
+                <div id="GroupBSub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
+                </div>
+                <hr>
+                <div id="GroupBSub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <!--#include virtual="demo/dropdowns.html" -->
+                </div>
+            </section>
+            <section id="GroupC" class="group padding-top-40">
+                <h3>Grid</h3>
+                <hr>
+                <div id="GroupCSub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Framework includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
+                    <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+                    <ul>
+                        <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+                        <li>Use rows to create horizontal groups of columns.</li>
+                        <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+                        <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+                        <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s.</li>
+                        <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
+                        <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.col-xs-4</code>.</li>
+                        <li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
+                        <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-*</code> class is not present.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="GroupD" class="group padding-top-40">
+                <h3>Jumbotron</h3>
+                <hr>
+                <div id="GroupDSub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.</p>
+                </div>
+                <hr>
+                <div id="GroupDSub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <!--#include virtual="demo/jumbotron.html" -->
+                </div>
+            </section>
+            <section id="GroupE" class="group padding-top-40">
+                <h3>Modal</h3>
+                <hr>
+                <div id="GroupESub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+                </div>
+                <hr>
+                <div id="GroupESub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <!--#include virtual="demo/modal.html" -->
+                </div>
+            </section>
+            <section id="GroupE2" class="group padding-top-40">
+                <h3>Notifications</h3>
+                <hr>
+                <div id="GroupE2Sub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Toggle a notification via JavaScript by clicking the button below. You will be able to call <code>notify('Message');</code> from the framework directly. Runs from core so it will be avaliable fromt he get go.</p>
+                </div>
+                <hr>
+                <div id="GroupE2Sub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="notify('Ooooooooo spicy!');">
+                        Launch Notification
+                    </button>
+                </div>
+            </section>
+            <section id="GroupE2" class="group padding-top-40">
+                <h3>Notifications</h3>
+                <hr>
+                <div id="GroupE2Sub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Toggle a notification using notify = function(message, delay, tone) the notification will be output within .notification-wrapper currently located inside header. Default settings are set inside config.js</p>
+                </div>
+                <hr>
+                <div id="GroupE2Sub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="notify('Alert! This is a notification');">
+                        Launch demo notification
+                    </button>
+                </div>
+            </section>
+            <section id="GroupF" class="group padding-top-40">
+                <h3>Tooltips</h3>
+                <hr>
+                <div id="GroupFSub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Four options are available: top, right, bottom, and left aligned. ( Must be set true in config.bootstrap.tooltips )</p>
+                </div>
+                <hr>
+                <div id="GroupFSub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <!--#include virtual="demo/tooltips.html" -->
+                </div>
+            </section>
+            <section id="GroupG" class="group padding-top-40">
+                <h3>Video Embed</h3>
+                <hr>
+                <div id="GroupGSub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <p>Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.</p>
+                </div>
+                <hr>
+                <div id="GroupGSub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <!--#include virtual="demo/videoEmbed.html" -->
+                </div>
+            </section>
+            <section id="GroupG" class="group padding-top-40">
+                <h3>Process</h3>
+                <hr>
+                <div id="GroupGSub1" class="subgroup">
+                    <h4>Intro</h4>
+                    <ul>
+                        <li><span class="label label-default">FE</span> - Front end</li>
+                        <li><span class="label label-default">BE</span> - Back end</li>
+                        <li><span class="label label-default">FW</span> - Framework</li>
+                        <li><span class="label label-default">TC</span> - Team City</li>
+                        <li><span class="label label-default">CS</span> - Client services</li>
+                        <li><span class="label label-default">PM</span> - Project manager</li>
+                        <li><span class="label label-default">Magic Name</span> - Unique job code required for any change request. This will be what defines the branch name. <span class="label label-danger">Naming convention to be agreed</span></li>
+                        <li><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> - Represents continuous integration</li>
+                    </ul>
+                </div>
+                <hr>
+                <div id="GroupGSub2" class="subgroup">
+                    <h4>Demo</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="cell" style="padding: 20px; border: 1px solid #84b7e2; border-radius: 6px; background-color: #c6e2f9;">
+                                <h2>New site</h2>
+                                <h3>1<small>A</small>. <span class="label label-default">FE</span> Creates Git</h3>
+                                <ul>
+                                    <li>
+                                        Single repo with two branches:
+                                        <ul>
+                                            <li>master</li>
+                                            <li>staging</li>
+                                        </ul>
+                                    </li>
+                                    <li>Clone <span class="label label-default">FW</span></li>
+                                    <li>Reinitialise git as new porject</li>
+                                    <li>Checkout staging</li>
+                                    <li>Write beautiful code</li>
+                                </ul>
+                                <h3>1<small>B</small>. <span class="label label-default">BE</span> add <span class="label label-default">TC</span> profile</h3>
+                                <ul>
+                                    <li>Octopus deploy</li>
+                                </ul>
+                                <h3>2. <span class="label label-default">BE</span> adds CMS</h3>
+                                <ul>
+                                    <li>Add latest CMS structure</li>
+                                    <li>Integrate HTML templates</li>
+                                </ul>
+                                <h3><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <span class="label label-default">TC</span> continuously deploys to DEV SERVER</h3>
+                                <h3>3. Internal Testing</h3>
+                                <ul>
+                                    <li>Design / <span class="label label-default">PM</span> / <span class="label label-default">CS</span> sign off</li>
+                                </ul>
+                                <h3>4. UAT Deploy</h3>
+                                <ul>
+                                    <li>Conf deploy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cell" style="padding: 20px; border: 1px solid #84b7e2; border-radius: 6px; background-color: #c6e2f9;">
+                                <h2>Change Request</h2>
+                                <h3>1. <span class="label label-default">CS</span> / <span class="label label-default">PM</span> Brief Job</h3>
+                                <ul>
+                                    <li>Supply <span class="label label-default">Magic Name</span></li>
+                                    <li>Supply brief</li>
+                                </ul>
+                                <h3>2. Create <span class="label label-default">Magic Name</span> Branch</h3>
+                                <ul>
+                                    <li>Create branch from master</li>
+                                    <li>Carry out work on this branch only (very important)</li>
+                                </ul>
+                                <h3><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <span class="label label-default">TC</span> continuously deploys to DEV SERVER</h3>
+                                <h3>2. HUB / <span class="label label-default">CS</span> / <span class="label label-default">PM</span> Sign Off</h3>
+                                <h3>4. <span class="label label-default">BE</span> Release From <span class="label label-default">PM</span> / <span class="label label-default">CS</span></h3>
+                                <ul>
+                                    <li>Supply release notes with what <span class="label label-default">Magic Names</span> are to go live (staging)</li>
+                                </ul>
+                                <h3>5. <span class="label label-default">BE</span> Test Staging</h3>
+                                <ul>
+                                    <li>Continue after sign off</li>
+                                </ul>
+                                <h3>6. <span class="label label-default">BE</span> Merge Master</h3>
+                                <ul>
+                                    <li>Master is now latest live</li>
+                                </ul>
+                                <h3>7. <span class="label label-default">BE</span> Remove <span class="label label-default">Magic Names</span> branch</h3>
+                                <ul>
+                                    <li>When the change request is complete <span class="label label-default">BE</span> to remove <span class="label label-default">magic number branch</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!--#include virtual="include/footer.html" -->
+<!--#include virtual="include/foot.html" -->

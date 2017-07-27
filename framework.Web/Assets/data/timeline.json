@@ -1,0 +1,34 @@
+{
+    "Results": [
+        {
+            "template": "#resultTemplateVideo",
+            "videoId": "bTqVqk7FSmY",
+            "name": "Hydrogen",
+            "type": "video",
+            "time": "Before 2k"
+        }, {
+            "template": "#resultTemplateSlider",
+            "name": "Helium",
+            "type": "slider",
+            "slider": [
+                {
+                    "name":" slide1",
+                    "img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=Slide-1&w=1250&h=550",
+                    "alt": "Slider image"
+                    }
+                    ,{
+                    "name":" slide2",
+                    "img": "https://placeholdit.imgix.net/~text?txtsize=33&txt=Slide-2&w=1250&h=550",
+                    "alt": "Slider image"
+                }
+            ],
+            "time": "After 2k"
+        }, {
+            "template": "#resultTemplateDoc",
+            "name": "Project plans",
+            "type": "doc",
+            "time": "After 2k",
+            "file": "/Assets/images/logo.png"
+        }
+    ]
+}

@@ -1,0 +1,408 @@
+// Form
+
+// temp basic styles for parsely.js
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+	color: $input-success-color;
+	background-color: $input-success-bg;
+	border: 1px solid $input-success-border;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+	color: $input-error-color;
+	background-color: $input-error-bg;
+	border: 1px solid $input-error-border;
+}
+
+.parsley-errors-list {
+	margin: 2px 0 3px;
+	padding: 0;
+	list-style-type: none;
+	color: $input-error-color;
+	font-size: 0.9em;
+	line-height: 0.9em;
+	opacity: 0;
+
+	transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	-moz-transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+	opacity: 1;
+}
+
+// Parsley validation
+
+input[type="file"].parsley-error {
+	~ .fakefile {
+		.file-result {
+			color: $input-error-color;
+			background: $input-error-bg;
+			border: 1px solid $input-error-border;
+		}
+	}
+}
+
+select.parsley-error {
+	~ .dropdown-toggle {
+		color: $input-error-color;
+		background: $input-error-bg;
+		border: 1px solid $input-error-border;
+	}
+}
+
+
+// General element styles
+
+.form-group {
+	position: relative;
+}
+
+textarea {
+	max-width: 100%;
+}
+
+fieldset {
+	margin-bottom: 15px;
+}
+
+.fieldset-title {
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+// Radio buttons and check boxes
+
+.selection-group {
+	input {
+		display: inline-block;
+		position: absolute;
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 10px;
+		height: 10px;
+		opacity: 0;
+
+		&:focus {
+			+ label:before {
+				@include box-shadow(0 0 10px $input-border-focus);
+				@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+			}
+		}
+	}
+
+	label {
+		display: inline-block;
+		position: relative;
+		padding-left: 25px;
+		cursor: pointer;
+
+		&:before {
+			display: inline-block;
+			position: absolute;
+			top: 3px;
+			left: 0;
+			width: 15px;
+			height: 15px;
+			content: '';
+			line-height: 1;
+			text-align: center;
+		}
+	}
+
+	&.radio {
+		input {
+			&:checked {
+				+ label:before {
+					background-color: $brand-success;
+				}
+			}
+		}
+
+		label {
+			&:before {
+				border: 3px solid $input-border;
+				border-radius: 1000px;
+			}
+		}
+	}
+
+	&.checkbox {
+		input {
+			+ label:before {
+				color: $input-border;
+    			font-family: 'Glyphicons Halflings';
+				content: '\e157';
+			}
+
+			&:checked {
+				+ label:before {
+					color: $brand-success;
+					content: '\e067';
+				}
+			}
+		}
+	}
+}
+
+
+// File Input
+
+input[type="file"] {
+	&:focus {
+		.fakefile .file-result {
+			border-color: $input-border-focus;
+			@include box-shadow(0 0 10px $input-border-focus);
+			@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+		}
+	}
+}
+
+.file-wrapper,
+.multifile-wrapper {
+	position: relative;
+	margin-bottom: $spc / 2;
+	width: 100%;
+	border: 0;
+	white-space: nowrap;
+
+	&.last {
+		.fake-close {
+			display: none !important;
+		}
+	}
+
+	input[type="file"] {
+		position: relative;
+		margin: 0;
+		padding: floor($spc / 2) floor($spc / 1.5);
+		text-align: right;
+		z-index: 5;
+		opacity: 0;
+	}
+
+	.fakefile {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border: 0;
+		z-index: 10;
+
+		$buttonWidth: 120px;
+
+		.fake-upload {
+			position: absolute;
+			margin: 3px;
+			padding-top: 3px;
+			width: $buttonWidth;
+			height: 28px;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			text-align: center;
+			cursor: pointer;
+			color: #fff;
+			border-radius: $border-radius-base;
+			background-color: $brand-primary;
+			z-index: 1;
+
+			&:hover {
+				background-color: darken($brand-primary, 10%) !important;
+			}
+		}
+
+		.file-result {
+			display: block;
+			position: absolute;
+			padding-left: $buttonWidth + 15;
+			padding-right: 44px;
+			width: 100%;
+			top: 0px;
+			left: 0px;
+			color: $input-color-placeholder;
+			border: 1px solid $input-border;
+			border-radius: $border-radius-base;
+			background: #fff;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: middle;
+
+			// &.loaded {
+			// 	color: $brand-success;
+			// }
+		}
+
+		.fake-close {
+			display: block;
+			position: absolute;
+			margin: 3px;
+			padding: 0;
+			width: 42px;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			border: 0 solid rgba(0, 0, 0, 0.4);
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: $border-radius-base;
+			border-bottom-right-radius: $border-radius-base;
+			background: $brand-primary;
+			z-index: 50;
+
+			.icon {
+				width: 16px;
+				height: 16px;
+				top: 1px;
+			}
+		}
+	}
+}
+
+// styled checkboxes
+
+.radio,
+.radio label,
+.checkbox,
+.checkbox label {
+	padding-left: 0;
+}
+
+/* Base for label styling */
+input[type="checkbox"],
+input[type="checkbox"]:checked {
+	left: -9999px;
+	position: absolute;
+}
+input[type="checkbox"] + label,
+input[type="checkbox"]:checked + label {
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+}
+
+/* checkbox aspect */
+input[type="checkbox"] + label:before,
+input[type="checkbox"]:checked + label:before {
+	border: 1px solid $gray-dark;
+	// background: $gray-lighter;
+	content: '';
+	height: 15px;
+	left: 0;
+	position: absolute;
+	top: 1px;
+	width: 15px;
+}
+
+/* checked mark aspect */
+input[type="checkbox"] + label:after {
+	content: '';
+	height: 14px;
+	left: 1px;
+	position: absolute;
+	top: 2px;
+	// transition: background .5s $animEasing;
+	width: 15px;
+}
+/* original using content */
+// input[type="checkbox"] + label:after {
+// 	color: transparent;
+// 	content: '✔';
+// 	font-size: 16px;
+// 	left: 5px;
+// 	line-height: 0.8;
+// 	position: absolute;
+// 	top: 2px;
+// 	transition: all .5s $animEasing;
+// }
+
+input[type="checkbox"]:checked + label:after {
+	background-image: url('../images/icon-tick.png');
+	background-size: 15px 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* disabled checkbox */
+input[type="checkbox"]:disabled + label:before,
+input[type="checkbox"]:disabled:checked + label:before {
+	box-shadow: none;
+	border-color: #bbb;
+	background-color: #ddd;
+}
+
+input[type="checkbox"]:disabled:checked + label:after {
+	color: #999;
+}
+
+input[type="checkbox"]:disabled + label {
+	color: #aaa;
+	cursor: not-allowed;
+}
+
+/* accessibility */
+input[type="checkbox"]:checked:focus + label:before,
+input[type="checkbox"]:focus + label:before {
+	// border: 1px solid $brand-magenta;
+}
+
+// styled radio buttons
+
+input[type="radio"] {
+	left: -9999px;
+	position: absolute;
+}
+
+input[type="radio"] + label {
+    cursor: pointer;
+}
+
+input[type="radio"] + label .radioCustom {
+    border-radius: 50%;
+	background-color: #fff;
+	border: 1px solid $gray-dark;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    margin-right: 15px;
+    margin-top: -3px;
+    position: relative;
+    vertical-align: middle;
+    width: 18px;
+}
+
+input[type="radio"] + label .radioCustom:after {
+	background-color: transparent;
+    border-radius: 50%;
+	content: '';
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    width: 10px;
+    transition: background-color 0.5s $animEasing;
+}
+
+input[type="radio"]:checked + label .radioCustom:after {
+	background-color: $gray-dark;
+}
+
+input[type="radio"] + label .radioCustom,
+input[type="radio"]:checked + label .radioCustom {
+	// transition: background-color 0.5s $animEasing;
+}
+
+input[type="radio"]:disabled + label {
+	cursor: default;
+	opacity: 0.5;
+}

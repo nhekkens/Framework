@@ -1,0 +1,182 @@
+/**
+ * Example file to show how styles should be written from a BEM approach
+ *
+ *
+ */
+
+ // temporary variable for page
+ $salmon: #fa8072;
+
+// Buttons
+
+.button {
+	background-color: #fff;
+	border: 2px solid $brand-primary;
+	border-radius: $border-radius-base;
+	margin-top: $spc;
+	padding: floor($spc / 2) floor($spc * 2);
+
+	&:hover {
+		background-color: $brand-primary;
+		color: #fff;
+	}
+}
+
+.button--state-success {
+	border-color: $brand-success;
+
+	&:hover {
+		background-color: $brand-success;
+	}
+}
+
+.button--state-danger {
+	border-color: $brand-danger;
+
+	&:hover {
+		background-color: $brand-danger;
+	}
+}
+
+
+// menu
+
+.menu {
+	align-items: center;
+	background-color: $salmon;
+	display: flex;
+	justify-content: space-between;
+	margin: $spc 0; 
+	padding: floor($spc * 2);
+	position: relative;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+}
+
+.menu--image {
+
+}
+
+.menu--link {
+	border-bottom: 5px solid $salmon;
+	color: #fff;
+	font-size: 20px;
+	padding: $spc;
+	text-transform: uppercase;
+
+	&:hover {
+		border-color: #fff;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.menu--link-selected {
+	border-color: #fff;
+}
+
+// flex exmaples
+
+// one row only
+.flexrow {
+	align-items: stretch;
+	display: flex;
+	justify-content: flex-start;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+}
+
+.flexrow--item {
+	background-color: $salmon;
+	color: #fff;
+	flex-basis: 25%;
+	margin: 0 floor($spc / 2);
+	padding: floor($spc / 2) $spc;
+
+	@media screen and (max-width: 600px) {
+		margin: floor($spc / 2) 0;
+	}
+
+	&:first-child {
+		margin-left: 0;
+
+		@media screen and (max-width: 600px) {
+			margin-top: 0;
+		}
+	}
+
+	&:last-child {
+		margin-right: 0;
+
+		@media screen and (max-width: 600px) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// list spanning mulitple rows
+.flexlist {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: - floor($spc / 2);
+	margin-right: - floor($spc / 2);
+}
+
+.flexlist--item {
+	display: flex;
+	padding: 0 floor($spc / 2);
+	margin-bottom: $spc;
+	width: 100%;
+
+	@media all and (min-width: $screen-sm) {
+		width: 50%;
+	}
+
+	@media all and (min-width: $screen-md) {
+		width: 33.33%;
+	}
+}
+
+.flexlist--content {
+	background-color: $salmon;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: $spc;
+	width: 100%;
+}
+
+
+// if link is wrapped around all content in item
+a.flexlist--content {
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+
+		.flexlist--cta {
+			border-bottom-right-radius: $spc;
+		}
+	}
+}
+
+.flexlist--para {
+	flex: 1 0 auto;
+}
+
+.flexlist--cta {
+	background-color: #fff;
+	color: $salmon;
+	padding: floor($spc / 2) $spc;
+	margin-top: floor($spc / 2);
+	transition: border-radius .2s linear;
+
+	&:hover {
+		border-bottom-right-radius: $spc;
+		color: $salmon;
+		text-decoration: none;
+	}
+}

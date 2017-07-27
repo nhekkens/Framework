@@ -1,0 +1,69 @@
+// Making a new HTML component
+// 1 - Replace componentTemplate with new name ( 3 occurences in this file )
+// 2 - All code goes into .componentTemplate
+// 3 - Save file as new name .html
+
+.button-loader {
+	background: $brand-primary;
+	border: none;
+	color: #fff;
+	display: inline-block;
+	font-size: $font-size-base;
+	letter-spacing: 1px;
+	outline: none;
+	padding: $spc floor($spc * 3);
+	position: relative;
+	text-transform: uppercase;
+	transition: background .2s linear, padding .2s linear;
+
+	&:hover {
+		background: darken($brand-primary, 10%)
+	}
+
+	&.button-loader-active, {
+		.button-loader-progress {
+			// display: block;
+			opacity: 1;
+		}
+	}
+
+	&.button-loader-success {
+		.button-loader-content {
+			&:before {
+				opacity: 1;	
+			}
+		}
+		.button-loader-progress {
+			// display: block;
+			opacity: 1;
+		}
+	}
+}
+
+.button-loader-content {
+	position: relative;
+	width: 100%;
+	z-index: 10;
+
+	&:before {
+		color: #fff;
+		content: '\e013';
+		font-family: 'Glyphicons Halflings';
+		opacity: 0;
+		position: absolute;
+		right: -20px;
+	}
+}
+
+
+.button-loader-progress {
+	background: darken($brand-primary, 20%);
+	// display: none;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	// transition: width .2s linear;
+	width: 0;
+}

@@ -1,0 +1,36 @@
+// Making a new HTML component
+// 1 - Replace componentTemplate with new name ( 3 occurences in this file )
+// 2 - All code goes into .componentTemplate
+// 3 - Save file as new name .html
+
+@keyframes fadeIn { 
+	0% {
+		opacity: 0; 
+		transform: scale(.1);
+	}
+
+	80% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.text-wrap span {
+	display: inline-block;
+	min-width: 8px;
+	animation-name: fadeIn;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@for $i from 1 to 1000 {
+	.text-wrap span:nth-child(#{$i}) {
+		animation-delay: $i * 0.1s;
+	}
+}

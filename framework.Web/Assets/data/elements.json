@@ -1,0 +1,688 @@
+{
+    "Results": [
+        {
+            "group": "Element Noble p New",
+            "position": 0,
+            "disclaimer": "generic",
+            "name": "Hydrogen",
+            "number": 1,
+            "small": "H",
+            "template": "element",
+            "dateUnix": 946685800,
+            "molar": 1.00794,
+            "electrons": [
+                1
+            ]
+        }, {
+            "group": "Element Noble p",
+            "position": 17,
+            "disclaimer": "generic",
+            "name": "Helium",
+            "number": 2,
+            "small": "He",
+            "template": "elementTwo",
+            "dateUnix": 946684800,
+            "molar": 4.002602,
+            "electrons": [
+                2
+            ]
+        }, {
+            "group": "Element Alkali s",
+            "position": 0,
+            "disclaimer": "generic",
+            "name": "Lithium",
+            "number": 3,
+            "small": "Li",
+            "template": "elementTwo",
+            "dateUnix": 946684800,
+            "molar": 6.941,
+            "electrons": [
+                2,
+                1
+            ]
+        }, {
+            "group": "Element Alkaline s",
+            "position": 1,
+            "disclaimer": "generic",
+            "name": "Beryllium",
+            "number": 4,
+            "small": "Be",
+            "template": "elementTwo",
+            "dateUnix": 946684800,
+            "molar": 9.012182,
+            "electrons": [
+                2,
+                2
+            ]
+        }, {
+            "group": "Element Metalloid Boron p",
+            "position": 12,
+            "disclaimer": "generic",
+            "name": "Boron",
+            "number": 5,
+            "small": "B",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 10.811,
+            "electrons": [
+                2,
+                3
+            ]
+        }, {
+            "group": "Element Nonmetal Carbon p",
+            "position": 13,
+            "disclaimer": "generic",
+            "name": "Carbon",
+            "number": 6,
+            "small": "C",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 12.0107,
+            "electrons": [
+                2,
+                4
+            ]
+        }, {
+            "group": "Element Nonmetal Pnictogen p",
+            "position": 14,
+            "disclaimer": "generic",
+            "name": "Nitrogen",
+            "number": 7,
+            "small": "N",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 14.0067,
+            "electrons": [
+                2,
+                5
+            ]
+        }, {
+            "group": "Element Nonmetal Chalcogen p",
+            "position": 15,
+            "disclaimer": "generic",
+            "name": "Oxygen",
+            "number": 8,
+            "small": "O",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 15.9994,
+            "electrons": [
+                2,
+                6
+            ]
+        }, {
+            "group": "Element Halogen p",
+            "position": 16,
+            "disclaimer": "generic",
+            "name": "Fluorine",
+            "number": 9,
+            "small": "F",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 18.998404,
+            "electrons": [
+                2,
+                7
+            ]
+        }, {
+            "group": "Element Noble p",
+            "position": 17,
+            "disclaimer": "generic",
+            "name": "Neon",
+            "number": 10,
+            "small": "Ne",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 20.1797,
+            "electrons": [
+                2,
+                8
+            ]
+        }, {
+            "group": "Element Alkali s",
+            "position": 0,
+            "disclaimer": "generic",
+            "name": "Sodium",
+            "number": 11,
+            "small": "Na",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 22.989769,
+            "electrons": [
+                2,
+                8,
+                1
+            ]
+        }, {
+            "group": "Element Alkaline s",
+            "position": 1,
+            "disclaimer": "generic",
+            "name": "Magnesium",
+            "number": 12,
+            "small": "Mg",
+            "template": "elementTwo",
+            "dateUnix": 946684800,
+            "molar": 24.305,
+            "electrons": [
+                2,
+                8,
+                2
+            ]
+        }, {
+            "group": "Element Poor Boron p",
+            "position": 12,
+            "disclaimer": "generic",
+            "name": "Aluminium",
+            "number": 13,
+            "small": "Al",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 26.981539,
+            "electrons": [
+                2,
+                8,
+                3
+            ]
+        }, {
+            "group": "Element Metalloid Carbon p",
+            "position": 13,
+            "disclaimer": "generic",
+            "name": "Silicon",
+            "number": 14,
+            "small": "Si",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 28.0855,
+            "electrons": [
+                2,
+                8,
+                4
+            ]
+        }, {
+            "group": "Element Nonmetal Pnictogen p",
+            "position": 14,
+            "disclaimer": "special",
+            "name": "Phosphorus",
+            "number": 15,
+            "small": "P",
+            "template": "elementTwo",
+            "dateUnix": 946684800,
+            "molar": 30.973763,
+            "electrons": [
+                2,
+                8,
+                5
+            ]
+        }, {
+            "group": "Element Nonmetal Chalcogen p",
+            "position": 15,
+            "disclaimer": "none",
+            "name": "Sulfur",
+            "number": 16,
+            "small": "S",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 32.065,
+            "electrons": [
+                2,
+                8,
+                6
+            ]
+        }, {
+            "group": "Element Halogen p",
+            "position": 16,
+            "disclaimer": "none",
+            "name": "Chlorine",
+            "number": 17,
+            "small": "Cl",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 35.453,
+            "electrons": [
+                2,
+                8,
+                7
+            ]
+        }, {
+            "group": "Element Noble p",
+            "position": 17,
+            "disclaimer": "special",
+            "name": "Argon",
+            "number": 18,
+            "small": "Ar",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 39.948,
+            "electrons": [
+                2,
+                8,
+                8
+            ]
+        }, {
+            "group": "Element Alkali s",
+            "position": 0,
+            "disclaimer": "none",
+            "name": "Potassium",
+            "number": 19,
+            "small": "K",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 39.0983,
+            "electrons": [
+                2,
+                8,
+                8,
+                1
+            ]
+        }, {
+            "group": "Element Alkaline s",
+            "position": 1,
+            "disclaimer": "none",
+            "name": "Calcium",
+            "number": 20,
+            "small": "Ca",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 40.078,
+            "electrons": [
+                2,
+                8,
+                8,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 2,
+            "disclaimer": "generic",
+            "name": "Scandium",
+            "number": 21,
+            "small": "Sc",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 44.955914,
+            "electrons": [
+                2,
+                8,
+                9,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 3,
+            "disclaimer": "special",
+            "name": "Titanium",
+            "number": 22,
+            "small": "Ti",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 47.867,
+            "electrons": [
+                2,
+                8,
+                10,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 4,
+            "disclaimer": "generic",
+            "name": "Vanadium",
+            "number": 23,
+            "small": "V",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 50.9415,
+            "electrons": [
+                2,
+                8,
+                11,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 5,
+            "disclaimer": "generic",
+            "name": "Chromium",
+            "number": 24,
+            "small": "Cr",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 51.9961,
+            "electrons": [
+                2,
+                8,
+                13,
+                1
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 6,
+            "disclaimer": "generic",
+            "name": "Manganese",
+            "number": 25,
+            "small": "Mn",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 54.938046,
+            "electrons": [
+                2,
+                8,
+                13,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 7,
+            "disclaimer": "special",
+            "name": "Iron",
+            "number": 26,
+            "small": "Fe",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 55.845,
+            "electrons": [
+                2,
+                8,
+                14,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 8,
+            "disclaimer": "generic",
+            "name": "Cobalt",
+            "number": 27,
+            "small": "Co",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 58.933193,
+            "electrons": [
+                2,
+                8,
+                15,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 9,
+            "disclaimer": "generic",
+            "name": "Nickel",
+            "number": 28,
+            "small": "Ni",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 58.6934,
+            "electrons": [
+                2,
+                8,
+                16,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 10,
+            "disclaimer": "generic",
+            "name": "Copper",
+            "number": 29,
+            "small": "Cu",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 63.546,
+            "electrons": [
+                2,
+                8,
+                18,
+                1
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 11,
+            "disclaimer": "special",
+            "name": "Zinc",
+            "number": 30,
+            "small": "Zn",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 65.38,
+            "electrons": [
+                2,
+                8,
+                18,
+                2
+            ]
+        }, {
+            "group": "Element Poor Boron p",
+            "position": 12,
+            "disclaimer": "generic",
+            "name": "Gallium",
+            "number": 31,
+            "small": "Ga",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 69.723,
+            "electrons": [
+                2,
+                8,
+                18,
+                3
+            ]
+        }, {
+            "group": "Element Metalloid Carbon p",
+            "position": 13,
+            "disclaimer": "generic",
+            "name": "Germanium",
+            "number": 32,
+            "small": "Ge",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 72.63,
+            "electrons": [
+                2,
+                8,
+                18,
+                4
+            ]
+        }, {
+            "group": "Element Metalloid Pnictogen p",
+            "position": 14,
+            "disclaimer": "generic",
+            "name": "Arsenic",
+            "number": 33,
+            "small": "As",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 74.9216,
+            "electrons": [
+                2,
+                8,
+                18,
+                5
+            ]
+        }, {
+            "group": "Element Nonmetal Chalcogen p",
+            "position": 15,
+            "disclaimer": "special",
+            "name": "Selenium",
+            "number": 34,
+            "small": "Se",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 78.96,
+            "electrons": [
+                2,
+                8,
+                18,
+                6
+            ]
+        }, {
+            "group": "Element Halogen p",
+            "position": 16,
+            "disclaimer": "generic",
+            "name": "Bromine",
+            "number": 35,
+            "small": "Br",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 79.904,
+            "electrons": [
+                2,
+                8,
+                18,
+                7
+            ]
+        }, {
+            "group": "Element Noble p",
+            "position": 17,
+            "disclaimer": "generic",
+            "name": "Krypton",
+            "number": 36,
+            "small": "Kr",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 83.798,
+            "electrons": [
+                2,
+                8,
+                18,
+                8
+            ]
+        }, {
+            "group": "Element Alkali s",
+            "position": 0,
+            "disclaimer": "generic",
+            "name": "Rubidium",
+            "number": 37,
+            "small": "Rb",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 85.4678,
+            "electrons": [
+                2,
+                8,
+                18,
+                8,
+                1
+            ]
+        }, {
+            "group": "Element Alkaline s",
+            "position": 1,
+            "disclaimer": "generic",
+            "name": "Strontium",
+            "number": 38,
+            "small": "Sr",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 87.62,
+            "electrons": [
+                2,
+                8,
+                18,
+                8,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 2,
+            "disclaimer": "generic",
+            "name": "Yttrium",
+            "number": 39,
+            "small": "Y",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 88.90585,
+            "electrons": [
+                2,
+                8,
+                18,
+                9,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 3,
+            "disclaimer": "generic",
+            "name": "Zirconium",
+            "number": 40,
+            "small": "Zr",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 91.224,
+            "electrons": [
+                2,
+                8,
+                18,
+                10,
+                2
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 4,
+            "disclaimer": "generic",
+            "name": "Niobium",
+            "number": 41,
+            "small": "Nb",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 92.90638,
+            "electrons": [
+                2,
+                8,
+                18,
+                12,
+                1
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 5,
+            "disclaimer": "generic",
+            "name": "Molybdenum",
+            "number": 42,
+            "small": "Mo",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 95.96,
+            "electrons": [
+                2,
+                8,
+                18,
+                13,
+                1
+            ]
+        }, {
+            "group": "Element Transition d",
+            "position": 6,
+            "disclaimer": "generic",
+            "name": "Technetium",
+            "number": 43,
+            "small": "Tc",
+            "template": "element",
+            "dateUnix": 946684800,
+            "molar": 98,
+            "electrons": [
+                2,
+                8,
+                18,
+                13,
+                2
+            ]
+        }, {
+            "group": "Element Transition d old",
+            "position": 7,
+            "disclaimer": "generic",
+            "name": "Ruthenium",
+            "number": 44,
+            "small": "Ru",
+            "template": "element",
+            "dateUnix": 946682800,
+            "molar": 101.07,
+            "electrons": [
+                2,
+                8,
+                18,
+                15,
+                1
+            ]
+        }
+    ],
+    "noResult": "<p>Your search did not return any results. Try your search again using the following methods:</p><ul><li>Use fewer and/or alternate keywords</li><li>Ensure you have made no spelling mistakes</li><li>Utilise the search suggestions which will guarantee results</li></ul>"
+}

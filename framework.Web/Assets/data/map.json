@@ -1,0 +1,29 @@
+{
+	"Options": { 
+			"Zoom" : 14,
+			"CenterLat" : 51.502820,
+			"CenterLng" : -0.119252
+		},
+	"Markers": [
+		{
+			"Title" : "LEWIS London",
+			"AddressLine1" : "Millbank Tower",
+			"AddressLine2" : "Millbank, London",
+			"AddressLine3" : "",
+			"Postcode" : "SW1P 4RS",
+			"Lat" : 51.491983,
+			"Lng" : -0.125907,
+			"Marker" : "assets/images/marker-red.png"
+		},
+		{
+			"Title" : "Puretone",
+			"AddressLine1" : "52-54, Stamford Street",
+			"AddressLine2" : "Hatfield House",
+			"AddressLine3" : "London",
+			"Postcode" : "SE1 9LX",
+			"Lat" : 51.507137,
+			"Lng" : -0.107579,
+			"Marker" : "assets/images/marker-red.png"
+		}
+	]
+}

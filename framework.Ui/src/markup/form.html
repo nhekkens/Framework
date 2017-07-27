@@ -1,0 +1,88 @@
+<!--#include virtual="include/head.html" -->
+<!--#include virtual="include/header.html" -->
+<!-- Content -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Form field</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="margin-top-20">
+                <label for="companytype">Company type</label>
+                <select class="selectpicker mobile-device" name="companytype" id="companytype" title="Practice" value="" required="required" aria-required="true" tabindex="-98">
+                    <option value="pleaseSelect" selected="" disabled="">Please select</option>
+                    <option value="academic">Academic</option>
+                    <option value="accountancy">Accountancy</option>
+                    <option value="banking">Banking/Investment</option>
+                    <option value="construction">Construction</option>
+                    <option value="design">Design</option>
+                    <option value="lawfirm">Law firm</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="student">Student</option>
+                    <option value="technology">Technology</option>
+                    <option value="telecoms">Telecoms</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <form action="#" class="margin-top-40 validateForm">
+        <div class="row">
+            <div class="col-md-4 margin-top-20">
+                <label for="name">Text Input:</label>
+                <br>
+                <input type="text" name="name" id="name" value="" required="required" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 margin-top-20">
+                <h4>Radio Button Choice</h4>
+                <div>
+                    <input type="radio" id="radioOne" name="radio" required="required" />
+                    <label for="radioOne"><span class="radioCustom"></span>Radio Button 1</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="radioTwo" name="radio" required="required" />
+                    <label for="radioTwo"><span class="radioCustom"></span>Radio Button 2</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 margin-top-20">
+                <label for="select-choice">Select Dropdown Choice:</label>
+                <br>
+                <select name="select-choice" id="select-choice" class="selectpicker" required="required">
+                    <option value="pleaseSelect" selected disabled>Please select</option>
+                    <option value="Choice 1">Choice 1</option>
+                    <option value="Choice 2">Choice 2</option>
+                    <option value="Choice 3">Choice 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 margin-top-20">
+                <input type="checkbox" name="checkbox" id="checkbox" required="required" />
+                <label for="checkbox">Checkbox</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 margin-top-20">
+                <label for="textarea">Textarea</label>
+                <textarea rows="4" cols="50" name="textarea" id="textarea" required="required"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 margin-top-20">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--#include virtual="include/footer.html" -->
+<!--#include virtual="include/foot.html" -->

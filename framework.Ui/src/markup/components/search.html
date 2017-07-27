@@ -1,0 +1,121 @@
+<!-- Making a new HTML component
+1 - Replace componentTemplate with new name ( 1 occurences in this file )
+2 - All code goes into <div class="componentTemplate">
+3 - Save file as new name .html -->
+<div class="search">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="search__sidebar">
+                <div class="search__filters">
+                    <div class="inputOne"></div>
+                    <div class="selectOne"></div>
+                    <div class="selectTwo"></div>
+                    <div class="selectThree"></div>
+                    <div class="selectFour"></div>
+                    <p class="total">Total: <span>0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <div class="row searchResults"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Using templating lang to do this use: <%= Key %> for dynamic content from data -->
+<script id="element" type="text/html">
+    <div class="result-item search-loading col-sm-4 col-md-3">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3><%= name %></h3>
+                <p>Group: <%= group %></p>
+                <p>
+                    <code><%= small %></code>
+                </p>
+                <p>
+                    <code><%- electrons %></code>
+                </p>
+                <span>Template 2</span>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="elementTwo" type="text/html">
+    <div class="result-item search-loading col-sm-4 col-md-3">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3><%= name %></h3>
+                <p>Group: <%= group %></p>
+                <p>
+                    <code><%= small %></code>
+                </p>
+                <p>
+                    <code><%- electrons %></code>
+                </p>
+                <span>Template 1</span>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script>
+    var searchOptions = {
+        url: '/Assets/data/elements.json',
+        searchInput: {
+            active: true,
+            parameter: 'name',
+            targetContainer: '.inputOne',
+            placeholder: 'Search Elements...'
+        },
+        filtersActive: true,
+        filters: [
+            {
+                type: 'select',
+                parameter: 'number',
+                targetContainer: '.selectOne',
+                title: 'Number'
+            },
+            {
+                type: 'select',
+                parameter: 'electrons',
+                targetContainer: '.selectTwo',
+                title: 'Electrons'
+            },
+            {
+                type: 'select',
+                parameter: 'name',
+                targetContainer: '.selectThree',
+                title: 'Name'
+            },
+            {
+                type: 'sort',
+                parameter: [
+                    { type: 'A-Z', title: 'Sort by' },
+                    { type: 'A-Z', title: 'Sort A-Z' },
+                    { type: 'Z-A', title: 'Sort Z-A' },
+                    { type: 'New', title: 'Date (Newest- Oldest)' },
+                    { type: 'Old', title: 'Date (Oldest- Newest)' }
+                ],
+                sortOn: 'name',
+                targetContainer: '.selectFour',
+                title: 'Sort by'
+            }
+        ],
+        totalCount: true,
+        pagination: true,
+        resultCount: 40, // This only works if pagination: true is set
+        loadMoreText: 'Load More',
+        defaultSort: 'A-Z',
+        queryString: true,
+        effectClass: 'effect-4', // Check the saved animations in search.scss
+        itemShowSpeed: 0, // .2 sec,
+        itemShowOffset: '70%',
+        resultsContainer: '.searchResults',
+        resultsTemplate: {
+            element: '#element',
+            elementTwo: '#elementTwo'
+        }
+    }
+</script>

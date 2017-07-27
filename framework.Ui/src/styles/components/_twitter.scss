@@ -1,0 +1,20 @@
+.twitter {
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	// li {
+	// 	padding-left: 0;
+	// }
+
+	.interact {
+		a {
+			margin-left: 10px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}

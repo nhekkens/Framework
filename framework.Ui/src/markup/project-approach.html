@@ -1,0 +1,425 @@
+<!--#include virtual="include/head.html" -->
+<!--#include virtual="include/header.html" -->
+<!-- Content -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Project approach</h1>
+        </div>
+
+        <!--Nav Bar -->
+        <nav class="col-sm-3 bs-docs-sidebar hidden-xs">
+            <ul id="sidebar" class="nav nav-stacked fixed">
+                <li>
+                    <a href="#GroupA">Introduction</a>
+                </li>
+                <li>
+                    <a href="#GroupB">Establishing support</a>
+                </li>
+                <li>
+                    <a href="#GroupC">Design review and BEM</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupCSub1">Introduction</a></li>
+                        <li><a href="#GroupCSub2">Examples</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#GroupD">Display flex</a>
+                    <ul class="nav nav-stacked">
+                        <li><a href="#GroupDSub1">Simple single row</a></li>
+                        <li><a href="#GroupDSub2">Even height multiple rows</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Main Content -->
+        <div class="col-sm-9 col-xs-12">
+
+            <section id="GroupA" class="group">
+                <h3>Introduction</h3>
+                <hr>
+                <div id="GroupASub1" class="subgroup">
+                    <p>After working on a few reskins and projects that had already been started by another developer I came across some areas that I felt could be refined. Refining these areas, although it will take a little more time and thought in the initial build, will save time on maintaining the project. This will be particularly helpful if and when the design/layout changes after development has started.</p>
+                </div>
+            </section>
+
+            <section id="GroupB" class="group padding-top-40">
+                <h3>Establishing support</h3>
+                <hr>
+                <div id="GroupBSub1" class="subgroup">
+                    <p>If it is possible, establish what browser support is required for the project. One common issue we have is aligning content blocks that sit in the same row but have varying heights on content. The default is to use <code>display: block;</code> and fix heights which is problematic as you have use character limits. If we are only supporting the latest version of IE then we can switch to using <code>display: flex;</code> which, as the name suggest, is much more flexible. Flexbox gives us much more control over alignment without the need to fix heights or use character limits. <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Find out more about flexbox</a>.</p>
+                </div>
+            </section>
+
+            <section id="GroupC" class="group padding-top-40">
+                <h3>Design review and BEM</h3>
+                <hr>
+                <div id="GroupCSub1" class="subgroup">
+                    <p>It's tricky as we often start a project before we have signed off designs but an adjustment in approach to styles will help going forward. Particularly if the design/layout changes after development has started.</p>
+
+                    <p>Going through all designs available and breaking each one down into components will help with the <a href="http://getbem.com/" target="_blank">BEM</a> approach. We can stick to the components structure we have in place but be stricter on how we name classes and the way we write the styles. The key to keeping maintenance quick and easy is not to nest selectors.</p>
+
+                    <p>Buttons are a good example...</p>
+                </div>
+                    
+                <div id="GroupCSub2" class="subgroup">
+                    <div class="row">
+                        <div class="col-sm-4 text-center">
+                            <button class="button">Default button</button>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <button class="button button--state-success">Success button</button>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <button class="button button--state-danger">Danger button</button>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top margin-bottom">
+                        <div class="col-sm-6">
+<pre>
+&lt;button class="button"&gt;
+    Normal button
+&lt;/button&gt;
+&lt;button class="button button--state-success"&gt;
+    Success button
+&lt;/button&gt;
+&lt;button class="button button--state-danger"&gt;
+    Danger button
+&lt;/button&gt;
+</pre>
+                        </div>
+                        <div class="col-sm-6">
+<pre>
+.button {
+    background-color: #fff;
+    border: 2px solid $brand-primary;
+    border-radius: $border-radius-base;
+    margin-top: $spc;
+    padding: floor($spc / 2) floor($spc * 2);
+
+    &amp;:hover {
+        background-color: $brand-primary;
+        color: #fff;
+    }
+}
+.button--state-success {
+    border-color: $brand-success;
+
+    &amp;:hover {
+        background-color: $brand-success;
+        color: #fff;
+    }
+}
+.button--state-danger {
+    &amp;:hover {
+        background-color: $brand-danger;
+    }
+}
+</pre>
+                        </div>
+                    </div>
+
+                    <p>Further reading on the BEM methodly...</p>
+                    <ul>
+                        <li>
+                            <a href="https://css-tricks.com/bem-101/" target="_blank">BEM 101 - CSS Tricks article</a>
+                        </li>
+                    </ul>
+
+                    <p>Below is a simple menu example, using BEM, which has parent and child elements. As this isn't the navigation for the site I have used a generic HTML element for the parent.</p>
+
+                    <div class="menu">
+                        <img src="/Assets/images/logo.png" alt="Framework logo" width="50" height="79" class="menu--image">
+                        <a href="#GroupC" class="menu--link menu--link-selected">About</a>
+                        <a href="#GroupC" class="menu--link">Blog</a>
+                        <a href="#GroupC" class="menu--link">Contact</a>
+                    </div>
+                    
+                    <div class="row margin-top margin-bottom">
+                        <div class="col-sm-6">
+<pre>
+&lt;div class="menu"&gt;
+    &lt;img src="/Assets/images/logo.png" alt="Framework logo" width="50" height="79" class="menu--image"&gt;
+    &lt;a href="#GroupC" class="menu--link menu--link-selected"&gt;About&lt;/a&gt;
+    &lt;a href="#GroupC" class="menu--link"&gt;Blog&lt;/a&gt;
+    &lt;a href="#GroupC" class="menu--link"&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+                        </div>
+                        <div class="col-sm-6">
+<pre>
+.menu {
+    background-color: salmon;
+    display: flex;
+    margin: $spc 0; 
+    padding: floor($spc * 2);
+    position: relative;
+}
+
+.menu--image {
+    margin-right: $spc;
+}
+
+.menu--link {
+    border-bottom: 5px solid salmon;
+    color: #fff;
+    font-size: 20px;
+    padding: $spc;
+    text-transform: uppercase;
+
+    &amp;:hover {
+        border-color: #fff;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.menu--link-selected {
+    border-color: #fff;
+}
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="GroupD" class="group padding-top-40 padding-bottom-40">
+                <h3>display: flex;</h3>
+                <hr>
+                <div id="GroupDSub1" class="subgroup">
+                    <p>Examples of display: flex;</p>
+
+                    <div class="flexrow">
+                        <div class="flexrow--item">
+                            <h4>Item Header</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+
+                        <div class="flexrow--item">
+                            <h4>Item Header</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="flexrow--item">
+                            <h4>Item Header</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+
+                        <div class="flexrow--item">
+                            <h4>Item Header</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row margin-top margin-bottom">
+                    <div class="col-sm-6">
+<pre>
+&lt;div class="flexrow"&gt;
+    &lt;div class="flexrow--item"&gt;
+        &lt;h4&gt;Item Header&lt;/h4&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>          
+                    </div>
+                    <div class="col-sm-6">
+<pre>
+// one row only
+.flexrow {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+.flexrow--item {
+    background-color: $salmon;
+    color: #fff;
+    flex-basis: 25%;
+    margin: 0 floor($spc / 2);
+    padding: floor($spc / 2) $spc;
+
+    @media screen and (max-width: 600px) {
+        margin: floor($spc / 2) 0;
+    }
+
+    &amp;:first-child {
+        margin-left: 0;
+
+        @media screen and (max-width: 600px) {
+            margin-top: 0;
+        }
+    }
+
+    &amp;:last-child {
+        margin-right: 0;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 0;
+        }
+    }
+}
+</pre>          
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="GroupDSub2" class="subgroup">
+                    <p>Here is one to combat the issue of fixing heights and character limits to keep a visual alignment. In this example I have, to show both options, made the first item a link with the rest just having the 'CTA' as the link.</p>
+
+                    <div class="flexlist">
+                        <div class="flexlist--item">
+                            <a href="#GroupD" class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="flexlist--cta">CTA</div>
+                            </a>
+                        </div>
+                        <div class="flexlist--item">
+                            <div class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <a href="#GroupD" class="flexlist--cta">CTA</a>
+                            </div>
+                        </div>
+                        <div class="flexlist--item">
+                            <div class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <a href="#GroupD" class="flexlist--cta">CTA</a>
+                            </div>
+                        </div>
+                        <div class="flexlist--item">
+                            <div class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <a href="#GroupD" class="flexlist--cta">CTA</a>
+                            </div>
+                        </div>
+                        <div class="flexlist--item">
+                            <div class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <a href="#GroupD" class="flexlist--cta">CTA</a>
+                            </div>
+                        </div>
+                        <div class="flexlist--item">
+                            <div class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <a href="#GroupD" class="flexlist--cta">CTA</a>
+                            </div>
+                        </div>
+                        <div class="flexlist--item">
+                            <div class="flexlist--content">
+                                <h4 class="flexlist--title">Item Header</h4>
+                                <p class="flexlist--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <a href="#GroupD" class="flexlist--cta">CTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row margin-top margin-bottom">
+                    <div class="col-sm-6">
+<pre>
+&lt;div class="flexlist"&gt;
+    &lt;div class="flexlist--item"&gt;
+        &lt;a href="#GroupD" class="flexlist--content"&gt;
+            &lt;h4 class="flexlist--title"&gt;Item Header&lt;/h4&gt;
+            &lt;p class="flexlist--para"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+            &lt;div class="flexlist--cta"&gt;CTA&lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="flexlist--item"&gt;
+        &lt;div class="flexlist--content"&gt;
+            &lt;h4 class="flexlist--title"&gt;Item Header&lt;/h4&gt;
+            &lt;p class="flexlist--para"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+            &lt;a href="#GroupD" class="flexlist--cta"&gt;CTA&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>          
+                    </div>
+                    <div class="col-sm-6">
+<pre>
+// list spanning mulitple rows
+.flexlist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: - floor($spc / 2);
+    margin-right: - floor($spc / 2);
+}
+
+.flexlist--item {
+    display: flex;
+    padding: 0 floor($spc / 2);
+    margin-bottom: $spc;
+    width: 100%;
+
+    @media all and (min-width: $screen-sm) {
+        width: 50%;
+    }
+
+    @media all and (min-width: $screen-md) {
+        width: 33.33%;
+    }
+}
+
+.flexlist--content {
+    background-color: $salmon;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: $spc;
+    width: 100%;
+}
+
+
+// if link is wrapped around all content in item
+a.flexlist--content {
+    &amp;:hover {
+        color: #fff;
+        text-decoration: none;
+
+        .flexlist--cta {
+            border-bottom-right-radius: $spc;
+        }
+    }
+}
+
+.flexlist--para {
+    flex: 1 0 auto;
+}
+
+.flexlist--cta {
+    background-color: #fff;
+    color: $salmon;
+    padding: floor($spc / 2) $spc;
+    margin-top: floor($spc / 2);
+    transition: border-radius .2s linear;
+
+    &amp;:hover {
+        border-bottom-right-radius: $spc;
+        color: $salmon;
+        text-decoration: none;
+    }
+}
+</pre>          
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+<!--#include virtual="include/footer.html" -->
+<!--#include virtual="include/foot.html" -->

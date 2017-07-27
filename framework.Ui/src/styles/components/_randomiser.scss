@@ -1,0 +1,68 @@
+.randomiser {
+    position: relative;
+    overflow: hidden;
+
+    #question {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        img {
+            margin-top: 50px;
+            margin-left: -10px;
+            width: 423px;
+            height: 427px;
+            border: 4px solid black;
+
+            @media screen and (max-width: $screen-sm) {
+                // margin-top: 0;
+                margin-left: 0;
+                width: 100%;
+                height: auto;
+            }
+        }
+        h1 {
+            max-width: 330px;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            top: 50%;
+            left: 15%;
+            text-align: left;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: #000000;
+            -webkit-text-fill-color: #d72863;
+
+            @media screen and (max-width: $screen-sm) {
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 100%;
+                max-width: inherit;
+                left: 0;
+            }
+        }
+
+        @media screen and (max-width: $screen-sm) {
+            height: auto;
+        }
+    }
+
+    .col-md-6 {
+        vertical-align: top;
+        text-align: center;
+    }
+
+    #chart {
+        @media screen and (max-width: 600px) {
+            zoom: 85%;
+        }
+
+        @media screen and (max-width: $screen-xs) {
+            zoom: 60%;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+/**
+ * Keyframe
+ *
+ *
+ */
+
+$startColor: #5b9aa0;
+$endColor: #622569;
+
+@keyframes bgColorChange {
+	0%   { background-color: $startColor; }
+	50% { background-color: $endColor; }
+	100% { background-color: $startColor; }
+}
+
+.keyframe {
+	.square {
+		animation: bgColorChange 5s 5;
+		background-color: $startColor;
+		display: block;
+		position: relative;
+		height: 100px;
+		width: 100px;
+	}
+	
+	// TEST FOR DIFFERENT WAYS OF TRIALING POTENTIAL LEWIS LOCATION HINT JOB
+	.bgImage {
+	    background: #333 url('http://www.teamlewis.com/img/icon-globe-white.png') no-repeat center center;
+	    background-size: 23px 33px;
+	    cursor: pointer;
+	    display: inline-block;
+	    height: 33px;
+	    margin-top: 20px;
+	    padding: 50px;
+	    position: relative;
+	    transition: background-image .3s cubic-bezier(0.65, 0.05, 0.24, 1.39);
+	    vertical-align: top;
+	    width: 23px;
+
+	    &:hover,
+	    &.fade {
+	    	background: #333 url('http://www.teamlewis.com/img/icon-globe-pink.png') no-repeat center center;
+	    	background-size: 23px 33px;
+	    }
+
+	    &.is-active {
+	    }
+
+	    .message {
+	    	background-color: $startColor;
+	    	bottom: -80px;
+	    	color: #fff;
+	    	display: none;
+	    	left: 0;
+	    	padding: 10px 15px;
+	    	position: absolute;
+	    	width: 200px;
+
+	    	&:before {
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid $startColor;
+				content: '';
+				height: 0;
+				left: 10px;
+				position: absolute;
+				top: -10px;
+	    		width: 0;
+	    	}
+	    }
+	}
+}
